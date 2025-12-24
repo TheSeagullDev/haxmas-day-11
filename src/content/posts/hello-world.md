@@ -1,7 +1,8 @@
 ---
 title: Hello there!
 description: A test blog post
-pubDate: Dec 23 2025
+pubDate: Dec 22 2025
+heroImage: https://picsum.photos/1000/200/
 ---
 
 # Hi there!
