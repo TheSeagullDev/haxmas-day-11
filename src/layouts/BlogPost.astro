@@ -1,0 +1,30 @@
+---
+import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+
+import FormattedDate from "../components/FormattedDate.astro";
+
+import "../styles/global.css";
+
+type Props = CollectionEntry<"blog">["data"];
+const { title, description, pubDate, heroImage } = Astro.props;
+---
+
+<div class="h-screen flex flex-col items-center">
+    <article class="m-16 p-8 border-2 rounded-2xl shadow-2xl">
+        <header class="flex flex-col mb-4">
+            <h1 class="text-4xl font-bold">{ title }</h1>
+            <p class="text-xl">{ description }</p>
+            {heroImage && (
+                <Image src={heroImage} format="webp" alt={title} />
+            )}
+            <p>
+                <FormattedDate date={pubDate} />
+            </p>
+        </header>
+
+        <div class="prose-sm">
+            <slot />
+        </div>
+    </article>
+</div>

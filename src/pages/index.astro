@@ -1,5 +1,5 @@
 ---
-
+import "../styles/global.css";
 ---
 
 <html lang="en">
@@ -10,7 +10,9 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="flex flex-col justify-center items-center h-screen gap-4">
+		<h1 class="text-3xl">TheSeagullDev's Blog</h1>
+		<p class="text-xl">Such a festive blog!</p>
+		<button class="bg-blue-400 p-4 rounded-2xl shadow-md"><a href="/posts" class="text-white">See posts!</a></button>
 	</body>
 </html>
